@@ -1,13 +1,12 @@
 {
   "private": "true",
   "name": "karponents-ui",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "version": "0.0.0",
   "description": "The Best Design System",
   "author": "Karpo <dhkdwk1041@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.6.3"
+  "packageManager": "pnpm@10.6.3",
+  "devDependencies": {
+    "turbo": "^2.4.4"
+  }
 }
