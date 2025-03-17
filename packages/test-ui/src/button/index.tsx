@@ -1,7 +1,7 @@
-import React from "react";
+import { ReactNode } from "react";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const Button = ({ children }: ButtonProps) => {
