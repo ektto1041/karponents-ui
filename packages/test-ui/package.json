@@ -1,0 +1,22 @@
+{
+  "name": "@karponents-ui/test-ui",
+  "version": "0.0.0",
+  "description": "Test UI Library in Karponents UI",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "author": "Karpo <dhkdwk1041@gmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.6.3",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
