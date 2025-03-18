@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
+import styles from "./button.module.css";
 
 interface ButtonProps {
   children: ReactNode;
 }
 
 export const Button = ({ children }: ButtonProps) => {
-  return <button>{children}</button>;
+  return <button className={`${styles.button} hovered`}>{children}</button>;
 };

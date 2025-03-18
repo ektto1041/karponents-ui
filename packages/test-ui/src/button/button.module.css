@@ -1,0 +1,8 @@
+:global(.hovered) {
+  &:hover {
+    background-color: black;
+  }
+}
+.button {
+  background-color: red;
+}
