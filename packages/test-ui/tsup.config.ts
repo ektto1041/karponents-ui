@@ -6,4 +6,8 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   clean: true,
+  minify: true,
+  loader: {
+    ".css": "local-css",
+  },
 });
