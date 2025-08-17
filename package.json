@@ -10,7 +10,8 @@
     "build:types": "tsc -b",
     "build:packages": "turbo build",
     "type-check": "turbo type-check",
-    "build": "pnpm run build:types && pnpm run build:packages"
+    "build": "pnpm run build:types && pnpm run build:packages",
+    "build-docs": "pnpm --filter=@karponents-ui/storybook build-storybook --output-dir ../../docs"
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
