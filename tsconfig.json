@@ -1,21 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": ".",
-    "baseUrl": ".",
-    "paths": {
-      "@karponents/*": ["packages/*/src"]
-    }
-  },
-  "include": ["packages", "apps"]
+  "files": [],
+  "references": [{ "path": "packages/karpotic/tsconfig.build.json" }],
+  "extends": "./tsconfig.base.json"
 }
