@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2022",
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": false,
+    "skipLibCheck": true,
+    "types": ["node", "react"]
+  },
+  "exclude": ["**/.*/", "**/build", "**/dist", "**/node_modules"]
+}

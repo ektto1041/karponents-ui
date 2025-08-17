@@ -1,0 +1,45 @@
+{
+  "name": "@karponents-ui/karpotic",
+  "version": "0.0.4",
+  "description": "Karpotic component library",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "type-check": "tsc --noEmit",
+    "bb": "babel"
+  },
+  "peerDependencies": {
+    "react": ">=19.1.1",
+    "react-dom": ">=19.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@storybook/react-vite": "^9.1.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rollup": "^4.46.2",
+    "storybook": "^9.1.2",
+    "typescript": "^5.9.2"
+  }
+}

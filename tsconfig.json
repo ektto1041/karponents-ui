@@ -1,0 +1,5 @@
+{
+  "files": [],
+  "references": [{ "path": "packages/karpotic/tsconfig.build.json" }],
+  "extends": "./tsconfig.base.json"
+}

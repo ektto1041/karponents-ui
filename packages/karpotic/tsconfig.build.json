@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "dist/types",
+    "tsBuildInfoFile": ".tsbuildinfo"
+  },
+  "include": ["src", "types"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.stories.ts",
+    "dist",
+    "node_modules"
+  ]
+}
