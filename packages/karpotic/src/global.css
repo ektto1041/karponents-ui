@@ -1,0 +1,31 @@
+:root {
+  --color-grey-1: #cccccc;
+  --color-grey-2: #aaaaaa;
+  --color-grey-3: #909090;
+  --color-grey-4: #717171;
+  --color-grey-5: #606060;
+
+  --font-size-md: 16px;
+
+  --line-height-md: 24px;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--karpotic-font-sans);
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.rmd {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+  font-weight: 400;
+}
