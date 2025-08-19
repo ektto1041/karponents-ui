@@ -12,7 +12,13 @@
     "allowSyntheticDefaultImports": true,
     "noErrorTruncation": false,
     "skipLibCheck": true,
-    "types": ["node", "react"]
+    "types": ["node", "react"],
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["packages/assets/*"],
+      "@karpotic/*": ["packages/karpotic/*"],
+      "@fonts/*": ["packages/fonts/*"]
+    }
   },
   "exclude": ["**/.*/", "**/build", "**/dist", "**/node_modules"]
 }
