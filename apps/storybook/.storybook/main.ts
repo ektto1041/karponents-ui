@@ -26,5 +26,35 @@ const config: StorybookConfig = {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+  async viteFinal(baseConfig) {
+    const { default: svgr } = await import("vite-plugin-svgr");
+
+    baseConfig.plugins = [
+      ...(baseConfig.plugins ?? []),
+      svgr({
+        svgrOptions: {
+          exportType: "named",
+          svgo: true,
+          dimensions: false,
+          titleProp: true,
+          ref: true,
+        },
+        include: "**/*.svg",
+      }),
+    ];
+
+    // Path aliases
+    baseConfig.resolve = {
+      ...baseConfig.resolve,
+      alias: {
+        ...baseConfig.resolve?.alias,
+        "@assets": join(__dirname, "../../../packages/assets"),
+        "@karpotic": join(__dirname, "../../../packages/karpotic"),
+        "@fonts": join(__dirname, "../../../packages/fonts"),
+      },
+    };
+
+    return baseConfig;
+  },
 };
 export default config;

@@ -23,6 +23,7 @@
     "react-dom": "^19.1.1",
     "storybook": "^9.1.2",
     "vite": "^7.1.2",
+    "vite-plugin-svgr": "^4.3.0",
     "vitest": "^3.2.4"
   }
 }
