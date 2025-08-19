@@ -3,6 +3,12 @@ import "./fonts.css";
 
 const preview: Preview = {
   parameters: {
+    backgrounds: {
+      options: {
+        light: { name: "Light", value: "#fff" },
+        dark: { name: "Dark", value: "#000" },
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
