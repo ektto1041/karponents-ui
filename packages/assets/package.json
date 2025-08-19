@@ -1,0 +1,14 @@
+{
+  "name": "@karponents-ui/assets",
+  "version": "0.0.1",
+  "description": "Shared assets for Karponents UI design system",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "icons",
+    "images", 
+    "illustrations"
+  ]
+}
