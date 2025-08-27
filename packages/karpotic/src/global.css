@@ -39,6 +39,10 @@
   --font-weight-bold: 700;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-family: var(--karpotic-font-sans);
@@ -49,6 +53,12 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  background: none;
+}
+
+input {
+  border: none;
+  outline: none;
   background: none;
 }
 

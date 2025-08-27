@@ -1,1 +1,1 @@
-export { Color, Size, SizeWithoutX } from "./common";
+export { Color, Size, SizeWithoutX, SvgComponent, Width } from "./common";
