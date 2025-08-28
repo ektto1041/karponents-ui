@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
-import { Color, SizeWithoutX, SvgComponent, Width } from "types";
+import { Color, SizeWithoutX, SvgComponent, Width } from "../types";
 
 type MainInputOwnProps = {
   sizes?: SizeWithoutX;

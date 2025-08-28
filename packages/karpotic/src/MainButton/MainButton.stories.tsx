@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { fn } from "storybook/test";
 
+// @ts-ignore
 import { ReactComponent as Logo } from "@assets/icons/search.svg";
 import MainButton from "./MainButton";
 import { MainButtonProps } from "./MainButton.types";

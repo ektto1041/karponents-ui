@@ -1,5 +1,6 @@
 import { ReactComponent as ArrowDownIcon } from "@assets/icons/arrow-down.svg";
 import { ReactComponent as ArrowUpIcon } from "@assets/icons/arrow-up.svg";
+import { c } from "@karponents-ui/utils";
 import { FC } from "react";
 import { MainButton } from "../MainButton";
 import {
@@ -23,7 +24,7 @@ const Dropdown: FC<DropdownProps> = ({
   };
 
   return (
-    <div className={[styles.container, "r", sizes].join(" ")}>
+    <div className={c(styles.container, "r", sizes)}>
       <MainButton
         size={sizes}
         color={color}
@@ -40,7 +41,7 @@ const Dropdown: FC<DropdownProps> = ({
 
 const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color }) => {
   return (
-    <ul className={[styles["dropdown-menu"], styles[color]].join(" ")}>
+    <ul className={c(styles["dropdown-menu"], styles[color])}>
       {itemList.map((item, i) => (
         <DropdownMenuItem item={item} color={color} key={i} />
       ))}
@@ -51,7 +52,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color }) => {
 const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item, color }) => {
   return item ? (
     <li
-      className={[styles["dropdown-item"], styles[color]].join(" ")}
+      className={c(styles["dropdown-item"], styles[color])}
       onClick={() => {
         item.onClick();
       }}

@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, FC, SVGProps } from "react";
-import { Color, SizeWithoutX } from "types";
+import { Color, SizeWithoutX } from "../types";
 
 type MainButtonOwnProps = {
   size?: SizeWithoutX;

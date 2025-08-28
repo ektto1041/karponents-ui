@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+// @ts-ignore
 import { ReactComponent as Logo } from "@assets/icons/search.svg";
 import MainInput from "./MainInput";
 import { MainInputProps } from "./MainInput.types";
