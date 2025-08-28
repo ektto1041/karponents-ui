@@ -12,6 +12,7 @@ import styles from "./style.module.css";
 const Dropdown: FC<DropdownProps> = ({
   sizes = "md",
   color = "default",
+  border = true,
   label,
   isOpen,
   setOpen,
@@ -26,30 +27,31 @@ const Dropdown: FC<DropdownProps> = ({
       <MainButton
         size={sizes}
         color={color}
+        border={border}
         Icon={isOpen ? ArrowUpIcon : ArrowDownIcon}
         onClick={handleOpen}
       >
         {label}
       </MainButton>
-      {isOpen && <DropdownMenu itemList={itemList} />}
+      {isOpen && <DropdownMenu itemList={itemList} color={color} />}
     </div>
   );
 };
 
-const DropdownMenu: FC<DropdownMenuProps> = ({ itemList }) => {
+const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color }) => {
   return (
-    <ul className={styles["dropdown-menu"]}>
+    <ul className={[styles["dropdown-menu"], styles[color]].join(" ")}>
       {itemList.map((item, i) => (
-        <DropdownMenuItem item={item} key={i} />
+        <DropdownMenuItem item={item} color={color} key={i} />
       ))}
     </ul>
   );
 };
 
-const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item }) => {
+const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item, color }) => {
   return item ? (
     <li
-      className={styles["dropdown-item"]}
+      className={[styles["dropdown-item"], styles[color]].join(" ")}
       onClick={() => {
         item.onClick();
       }}
@@ -58,7 +60,7 @@ const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item }) => {
     </li>
   ) : (
     <li className={styles["dropdown-divider"]}>
-      <div className={styles["divider-line"]} />
+      <div className={[styles["divider-line"], styles[color]].join(" ")} />
     </li>
   );
 };

@@ -20,6 +20,10 @@ const meta = {
       control: "inline-radio",
       options: ["default", "dark"],
     },
+    border: {
+      control: "inline-radio",
+      options: [true, false],
+    },
     label: {
       control: "text",
     },
@@ -33,6 +37,7 @@ const meta = {
   args: {
     sizes: "md",
     color: "default",
+    border: true,
     label: "Dropdown",
   },
 } satisfies Meta<DropdownProps>;

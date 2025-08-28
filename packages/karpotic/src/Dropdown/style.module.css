@@ -6,11 +6,17 @@
 .dropdown-menu {
   position: absolute;
   left: 0;
-  top: 100%;
+  top: calc(100% + 8px);
   border-radius: 8px;
   padding: 8px 0;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: var(--color-white-1);
+  box-shadow: var(--shadow-light);
+  background-color: var(--color-light-component-background);
+}
+
+.dropdown-menu.dark {
+  box-shadow: var(--shadow-dark);
+  background-color: var(--color-dark-component-background);
+  border: 1px solid var(--color-dark-component-border);
 }
 
 .dropdown-item {
@@ -18,12 +24,21 @@
   cursor: pointer;
   user-select: none;
   transition: background-color 0.25s, color 0.25s;
-  color: var(--color-grey-4);
+  color: var(--color-light-unfocused-font);
+}
+
+.dropdown-item.dark {
+  color: var(--color-dark-unfocused-font);
 }
 
 .dropdown-item:hover {
-  background-color: var(--color-white-3);
-  color: var(--color-black-5);
+  background-color: var(--color-light-focused-component-background);
+  color: var(--color-light-focused-font);
+}
+
+.dropdown-item.dark:hover {
+  background-color: var(--color-dark-focused-component-background);
+  color: var(--color-dark-focused-font);
 }
 
 .dropdown-divider {
@@ -33,5 +48,9 @@
 .divider-line {
   width: 100%;
   height: 1px;
-  background-color: var(--color-grey-1);
+  background-color: var(--color-light-unfocused-font);
+}
+
+.divider-line.dark {
+  background-color: var(--color-dark-unfocused-font);
 }

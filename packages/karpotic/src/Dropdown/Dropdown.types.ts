@@ -3,6 +3,7 @@ import { Color, SizeWithoutX } from "types";
 type DropdownOwnProps = {
   sizes?: SizeWithoutX;
   color?: Color;
+  border?: boolean;
   label: string;
   isOpen: boolean;
   setOpen: (isOpen: boolean) => void;
@@ -11,10 +12,12 @@ type DropdownOwnProps = {
 };
 
 export type DropdownMenuProps = {
+  color: Color;
   itemList: DropdownItemData[];
 };
 
 export type DropdownMenuItemProps = {
+  color: Color;
   item: DropdownItemData;
 };
 
