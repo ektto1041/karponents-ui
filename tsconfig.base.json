@@ -15,6 +15,7 @@
     "types": ["node", "react"],
     "baseUrl": ".",
     "paths": {
+      "@karponents-ui/utils": ["packages/utils/src"],
       "@assets/*": ["packages/assets/*"],
       "@karpotic/*": ["packages/karpotic/*"],
       "@fonts/*": ["packages/fonts/*"]
