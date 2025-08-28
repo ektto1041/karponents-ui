@@ -9,9 +9,11 @@ const MainButton: FC<MainButtonProps> = ({
   color = "default",
   Icon,
   children,
+  ...props
 }) => {
   return (
     <button
+      {...props}
       className={`
         ${styles.container}
         ${
