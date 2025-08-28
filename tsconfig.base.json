@@ -20,5 +20,11 @@
       "@fonts/*": ["packages/fonts/*"]
     }
   },
-  "exclude": ["**/.*/", "**/build", "**/dist", "**/node_modules"]
+  "exclude": [
+    "**/.*/",
+    "**/build",
+    "**/dist",
+    "**/node_modules",
+    "**/*.stories.tsx"
+  ]
 }

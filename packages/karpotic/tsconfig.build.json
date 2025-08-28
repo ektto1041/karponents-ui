@@ -14,7 +14,7 @@
   "exclude": [
     "**/*.test.ts",
     "**/*.spec.ts",
-    "**/*.stories.ts",
+    "**/*.stories.tsx",
     "dist",
     "node_modules"
   ]
