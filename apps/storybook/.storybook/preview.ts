@@ -6,7 +6,7 @@ const preview: Preview = {
     backgrounds: {
       options: {
         light: { name: "Light", value: "#fff" },
-        dark: { name: "Dark", value: "#000" },
+        dark: { name: "Dark", value: "#161616" },
       },
     },
     controls: {
