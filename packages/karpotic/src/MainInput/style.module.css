@@ -1,8 +1,8 @@
 .container {
   display: flex;
   align-items: center;
-  color: var(--color-grey-4);
-  border-bottom: 1px solid var(--color-grey-4);
+  color: var(--color-light-unfocused-font);
+  border-bottom: 1px solid var(--color-light-unfocused-font);
   transition: 0.25s border-color, 0.25s color;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .dark {
-  color: var(--color-grey-1);
-  border-bottom: 1px solid var(--color-grey-1);
+  color: var(--color-dark-unfocused-font);
+  border-bottom: 1px solid var(--color-dark-unfocused-font);
 }
 
 .input {
@@ -34,23 +34,23 @@
 }
 
 .input::placeholder {
-  color: var(--color-grey-4);
+  color: var(--color-light-placeholder-font);
 }
 
 .dark .input::placeholder {
-  color: var(--color-grey-1);
+  color: var(--color-dark-placeholder-font);
 }
 
 .container:hover,
 .container:focus-within {
-  color: var(--color-black-4);
-  border-color: var(--color-black-4);
+  color: var(--color-light-focused-font);
+  border-color: var(--color-light-focused-font);
 }
 
 .dark:hover,
 .dark:focus-within {
-  color: var(--color-white-1);
-  border-color: var(--color-white-1);
+  color: var(--color-dark-focused-font);
+  border-color: var(--color-dark-focused-font);
 }
 
 .icon-wrapper {
