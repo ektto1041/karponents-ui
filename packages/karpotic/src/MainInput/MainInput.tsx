@@ -1,3 +1,4 @@
+import { c } from "@karponents-ui/utils";
 import { FC } from "react";
 import "../global.css";
 import { MainInputProps } from "./MainInput.types";
@@ -12,20 +13,18 @@ const MainInput: FC<MainInputProps> = ({
 }) => {
   return (
     <div
-      className={[
+      className={c(
         styles.container,
-        width === "full" && styles.full,
-        color === "dark" && styles.dark,
-        styles[sizes],
-      ]
-        .filter(Boolean)
-        .join(" ")}
+        width === "full" ? styles.full : "",
+        color === "dark" ? styles.dark : "",
+        styles[sizes]
+      )}
       style={width !== "full" ? { width } : undefined}
     >
-      <input {...props} className={[styles.input, sizes, "r"].join(" ")} />
+      <input {...props} className={c(styles.input, sizes, "r")} />
 
       {Icon ? (
-        <div className={`${styles["icon-wrapper"]} ${styles[sizes]}`}>
+        <div className={c(styles["icon-wrapper"], styles[sizes])}>
           <Icon className={styles.icon} />
         </div>
       ) : null}

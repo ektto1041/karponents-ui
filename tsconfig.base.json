@@ -15,10 +15,17 @@
     "types": ["node", "react"],
     "baseUrl": ".",
     "paths": {
+      "@karponents-ui/utils": ["packages/utils/src"],
       "@assets/*": ["packages/assets/*"],
       "@karpotic/*": ["packages/karpotic/*"],
       "@fonts/*": ["packages/fonts/*"]
     }
   },
-  "exclude": ["**/.*/", "**/build", "**/dist", "**/node_modules"]
+  "exclude": [
+    "**/.*/",
+    "**/build",
+    "**/dist",
+    "**/node_modules",
+    "**/*.stories.tsx"
+  ]
 }

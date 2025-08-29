@@ -1,3 +1,2 @@
-import MainInput from "./MainInput";
-
-export { MainInput };
+export { default as MainInput } from "./MainInput";
+export type { MainInputProps } from "./MainInput.types";

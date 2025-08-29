@@ -7,6 +7,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "dependencies": {
+    "@karponents-ui/utils": "workspace:*"
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.0",
     "@storybook/addon-a11y": "^9.1.2",

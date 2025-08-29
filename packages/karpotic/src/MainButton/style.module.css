@@ -1,12 +1,15 @@
 .container {
-  color: var(--color-grey-4);
+  color: var(--color-light-unfocused-font);
   transition: 0.25s border-color, 0.25s color;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
 }
 
 .container.dark {
-  color: var(--color-grey-1);
+  color: var(--color-dark-unfocused-font);
+  background-color: var(--color-dark-component-background);
 }
 
 .sm {
@@ -40,27 +43,25 @@
 }
 
 .border {
-  border: 1px solid var(--color-grey-4);
-  border-radius: 8px;
+  border: 1px solid var(--color-light-unfocused-font);
 }
 
 .border.dark {
-  border: 1px solid var(--color-grey-1);
-  border-radius: 8px;
+  border: 1px solid var(--color-dark-unfocused-font);
 }
 
 .container:hover {
-  color: var(--color-black-5);
+  color: var(--color-light-focused-font);
 }
 
 .container.border:hover {
-  border-color: var(--color-black-5);
+  border-color: var(--color-light-focused-font);
 }
 
 .container.dark:hover {
-  color: var(--color-white-1);
+  color: var(--color-dark-focused-font);
 }
 
 .container.dark.border:hover {
-  border-color: var(--color-white-1);
+  border-color: var(--color-dark-focused-font);
 }

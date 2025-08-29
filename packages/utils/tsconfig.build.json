@@ -10,7 +10,6 @@
     "outDir": "dist/types",
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "references": [{ "path": "../utils/tsconfig.build.json" }],
   "include": ["src", "types"],
   "exclude": [
     "**/*.test.ts",

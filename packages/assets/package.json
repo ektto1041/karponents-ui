@@ -3,12 +3,10 @@
   "version": "0.0.1",
   "description": "Shared assets for Karponents UI design system",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "private": "true",
   "files": [
     "icons",
-    "images", 
+    "images",
     "illustrations"
   ]
 }
