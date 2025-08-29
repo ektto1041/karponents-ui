@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 현재 브랜치 이름 가져오기
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# dev 브랜치일 때만 실행
+if [ "$branch" = "dev" ]; then
+  echo "🔍 Running type-check before pushing to dev..."
+  pnpm run type-check
+
+  if [ $? -ne 0 ]; then
+    echo "❌ Type check failed. Push aborted."
+    exit 1
+  fi
+else
+  echo "ℹ️ Not on dev branch. Skipping type-check."
+fi
