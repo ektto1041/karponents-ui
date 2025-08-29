@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "dev" ]; then
+  echo "🚀 Running build before pushing to dev..."
+  pnpm run build
+  if [ $? -ne 0 ]; then
+    echo "❌ Build failed. Push aborted."
+    exit 1
+  fi
+else
+  echo "ℹ️ Not on dev branch. Skipping build."
+fi
