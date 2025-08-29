@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+// @ts-ignore
+import { ReactComponent as SearchIcon } from "@assets/icons/search.svg";
 import { useState } from "react";
 import { fn } from "storybook/test";
 import Dropdown from "./Dropdown";
@@ -24,10 +26,6 @@ const meta = {
       control: "inline-radio",
       options: ["auto", "full", "300px"],
     },
-    border: {
-      control: "inline-radio",
-      options: [true, false],
-    },
     label: {
       control: "text",
     },
@@ -43,7 +41,6 @@ const meta = {
     color: "default",
     width: "auto",
     anchor: "L",
-    border: true,
     label: "Dropdown",
   },
 } satisfies Meta<DropdownProps>;
@@ -85,6 +82,50 @@ export const Primary: Story = {
           setOpen={setOpen}
           isOpen={isOpen}
           itemList={itemList}
+        />
+      </>
+    );
+  },
+};
+
+export const CustomButton: Story = {
+  render: (args) => {
+    const [isOpen, setOpen] = useState(false);
+    const itemList: DropdownItemData[] = [
+      {
+        label: "Item 1: Javascript + Java",
+        onClick: fn(),
+      },
+      {
+        label: "Item 2: Typescript",
+        onClick: fn(),
+      },
+      {
+        label: "Item 3: React.js",
+        onClick: fn(),
+      },
+      null,
+      {
+        label: "Item 4: Next.js",
+        onClick: fn(),
+      },
+      {
+        label: "Item 5: Nest.js",
+        onClick: fn(),
+      },
+    ];
+
+    return (
+      <>
+        <Dropdown
+          {...args}
+          setOpen={setOpen}
+          isOpen={isOpen}
+          itemList={itemList}
+          buttonProps={{
+            border: false,
+            Icon: SearchIcon,
+          }}
         />
       </>
     );

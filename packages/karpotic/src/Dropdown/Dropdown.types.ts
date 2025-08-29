@@ -1,16 +1,16 @@
+import { MainButtonProps } from "../MainButton";
 import { Color, SizeWithoutX, Width } from "../types";
 
 type DropdownOwnProps = {
   sizes?: SizeWithoutX;
-  width?: Width;
   color?: Color;
-  border?: boolean;
-  label: string;
   anchor?: Anchor;
+  label: string;
+  width?: Width;
+  buttonProps: Omit<MainButtonProps, "width" | "onClick">;
   isOpen: boolean;
   setOpen: (isOpen: boolean) => void;
   itemList: DropdownItemData[];
-  // Button: MainButton;
 };
 
 export type DropdownMenuProps = {

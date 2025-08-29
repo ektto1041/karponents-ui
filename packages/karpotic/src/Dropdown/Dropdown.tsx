@@ -13,18 +13,18 @@ import styles from "./style.module.css";
 const Dropdown: FC<DropdownProps> = ({
   sizes = "md",
   color = "default",
-  border = true,
-  width = "auto",
   label,
   anchor = "L",
+  width = "auto",
+  buttonProps,
   isOpen,
   setOpen,
   itemList,
 }) => {
+  console.log(buttonProps);
   const handleOpen = () => {
     setOpen(!isOpen);
   };
-
   return (
     <div
       className={c(styles.container, "r", sizes)}
@@ -36,8 +36,8 @@ const Dropdown: FC<DropdownProps> = ({
         sizes={sizes}
         width={width}
         color={color}
-        border={border}
-        Icon={isOpen ? ArrowUpIcon : ArrowDownIcon}
+        {...buttonProps}
+        Icon={buttonProps?.Icon || (isOpen ? ArrowUpIcon : ArrowDownIcon)}
         onClick={handleOpen}
       >
         {label}
