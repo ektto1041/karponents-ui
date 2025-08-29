@@ -14,6 +14,7 @@ const Dropdown: FC<DropdownProps> = ({
   sizes = "md",
   color = "default",
   border = true,
+  width = "auto",
   label,
   anchor = "L",
   isOpen,
@@ -25,9 +26,15 @@ const Dropdown: FC<DropdownProps> = ({
   };
 
   return (
-    <div className={c(styles.container, "r", sizes)}>
+    <div
+      className={c(styles.container, "r", sizes)}
+      style={{
+        width: width === "full" ? "100%" : width,
+      }}
+    >
       <MainButton
         sizes={sizes}
+        width={width}
         color={color}
         border={border}
         Icon={isOpen ? ArrowUpIcon : ArrowDownIcon}

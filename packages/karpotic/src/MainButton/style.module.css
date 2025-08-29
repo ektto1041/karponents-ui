@@ -2,6 +2,7 @@
   color: var(--color-light-unfocused-font);
   transition: 0.25s border-color, 0.25s color;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-radius: 8px;
 }

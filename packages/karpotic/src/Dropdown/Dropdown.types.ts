@@ -1,7 +1,8 @@
-import { Color, SizeWithoutX } from "../types";
+import { Color, SizeWithoutX, Width } from "../types";
 
 type DropdownOwnProps = {
   sizes?: SizeWithoutX;
+  width?: Width;
   color?: Color;
   border?: boolean;
   label: string;

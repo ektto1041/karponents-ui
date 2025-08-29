@@ -20,6 +20,10 @@ const meta = {
       control: "inline-radio",
       options: ["default", "dark"],
     },
+    width: {
+      control: "inline-radio",
+      options: ["auto", "full", "300px"],
+    },
     border: {
       control: "inline-radio",
       options: [true, false],
@@ -37,6 +41,8 @@ const meta = {
   args: {
     sizes: "md",
     color: "default",
+    width: "auto",
+    anchor: "L",
     border: true,
     label: "Dropdown",
   },
