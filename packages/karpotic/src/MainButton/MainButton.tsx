@@ -1,3 +1,4 @@
+import { c } from "@karponents-ui/utils";
 import { FC } from "react";
 import "../global.css";
 import { MainButtonProps } from "./MainButton.types";
@@ -15,21 +16,14 @@ const MainButton: FC<MainButtonProps> = ({
   return (
     <button
       {...props}
-      className={`
-        ${styles.container}
-        ${
-          sizes === "md"
-            ? "r md"
-            : sizes === "sm"
-            ? "r sm"
-            : sizes === "lg"
-            ? "r lg"
-            : ""
-        }
-        ${styles[sizes]}
-        ${border ? styles.border : ""}
-        ${color === "dark" ? styles.dark : ""}
-      `}
+      className={c(
+        styles.container,
+        "r",
+        sizes,
+        styles[sizes],
+        border ? styles.border : "",
+        color === "dark" ? styles.dark : ""
+      )}
       style={{ ...props.style, width: width === "full" ? "100%" : width }}
     >
       {children}
