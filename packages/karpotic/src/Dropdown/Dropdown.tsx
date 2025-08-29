@@ -15,6 +15,7 @@ const Dropdown: FC<DropdownProps> = ({
   color = "default",
   border = true,
   label,
+  anchor = "L",
   isOpen,
   setOpen,
   itemList,
@@ -34,14 +35,22 @@ const Dropdown: FC<DropdownProps> = ({
       >
         {label}
       </MainButton>
-      {isOpen && <DropdownMenu itemList={itemList} color={color} />}
+      {isOpen && (
+        <DropdownMenu itemList={itemList} color={color} anchor={anchor} />
+      )}
     </div>
   );
 };
 
-const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color }) => {
+const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color, anchor }) => {
   return (
-    <ul className={c(styles["dropdown-menu"], styles[color])}>
+    <ul
+      className={c(
+        styles["dropdown-menu"],
+        styles[color],
+        anchor === "L" ? styles["anchor-l"] : styles["anchor-r"]
+      )}
+    >
       {itemList.map((item, i) => (
         <DropdownMenuItem item={item} color={color} key={i} />
       ))}

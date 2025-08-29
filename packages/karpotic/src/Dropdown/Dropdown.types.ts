@@ -5,6 +5,7 @@ type DropdownOwnProps = {
   color?: Color;
   border?: boolean;
   label: string;
+  anchor?: Anchor;
   isOpen: boolean;
   setOpen: (isOpen: boolean) => void;
   itemList: DropdownItemData[];
@@ -13,6 +14,7 @@ type DropdownOwnProps = {
 
 export type DropdownMenuProps = {
   color: Color;
+  anchor: Anchor;
   itemList: DropdownItemData[];
 };
 
@@ -25,5 +27,7 @@ export type DropdownItemData = {
   label: string;
   onClick: Function;
 } | null;
+
+export type Anchor = "L" | "R";
 
 export type DropdownProps = DropdownOwnProps;

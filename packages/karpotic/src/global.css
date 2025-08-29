@@ -32,7 +32,7 @@
   --color-dark-component-border: rgba(255, 255, 255, 0.05);
 
   /* 라이트/다크 모드 시 포커스된 컴포넌트의 배경 색 */
-  --color-light-foucused-component-background: var(--color-white-3);
+  --color-light-focused-component-background: var(--color-white-3);
   --color-dark-focused-component-background: var(--color-black-1);
 
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.25);
