@@ -6,11 +6,11 @@ branch="$(git rev-parse --abbrev-ref HEAD)"
 
 # dev 브랜치일 때만 실행
 if [ "$branch" = "dev" ]; then
-  echo "🔍 Running type-check before pushing to dev..."
+  echo "🔍 Running type-check before committing to dev..."
   pnpm run type-check
 
   if [ $? -ne 0 ]; then
-    echo "❌ Type check failed. Push aborted."
+    echo "❌ Type check failed. Commit aborted."
     exit 1
   fi
 else
