@@ -4,7 +4,8 @@ import { MainButtonProps } from "./MainButton.types";
 import styles from "./style.module.css";
 
 const MainButton: FC<MainButtonProps> = ({
-  size = "md",
+  sizes = "md",
+  width = "auto",
   border = true,
   color = "default",
   Icon,
@@ -17,18 +18,19 @@ const MainButton: FC<MainButtonProps> = ({
       className={`
         ${styles.container}
         ${
-          size === "md"
+          sizes === "md"
             ? "r md"
-            : size === "sm"
+            : sizes === "sm"
             ? "r sm"
-            : size === "lg"
+            : sizes === "lg"
             ? "r lg"
             : ""
         }
-        ${styles[size]}
+        ${styles[sizes]}
         ${border ? styles.border : ""}
         ${color === "dark" ? styles.dark : ""}
       `}
+      style={{ ...props.style, width: width === "full" ? "100%" : width }}
     >
       {children}
       {Icon ? <Icon className={styles.icon} /> : <></>}

@@ -26,7 +26,7 @@ const Dropdown: FC<DropdownProps> = ({
   return (
     <div className={c(styles.container, "r", sizes)}>
       <MainButton
-        size={sizes}
+        sizes={sizes}
         color={color}
         border={border}
         Icon={isOpen ? ArrowUpIcon : ArrowDownIcon}

@@ -10,16 +10,19 @@ import { MainButtonProps } from "./MainButton.types";
 const meta = {
   title: "Karpotic/MainButton",
   component: MainButton,
-  parameters: {
-    layout: "centered",
-  },
   tags: ["autodocs"],
   argTypes: {
-    size: {
+    sizes: {
       control: {
         type: "inline-radio",
       },
       options: ["sm", "md", "lg"],
+    },
+    width: {
+      control: {
+        type: "inline-radio",
+      },
+      options: ["auto", "full", "300px"],
     },
     border: {
       control: "inline-radio",
@@ -35,7 +38,8 @@ const meta = {
     },
   },
   args: {
-    size: "md",
+    sizes: "md",
+    width: "auto",
     border: true,
     onClick: fn(),
     color: "default",
