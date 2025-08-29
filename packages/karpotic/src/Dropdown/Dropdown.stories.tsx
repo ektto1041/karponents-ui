@@ -50,24 +50,24 @@ export const Primary: Story = {
     const [isOpen, setOpen] = useState(false);
     const itemList: DropdownItemData[] = [
       {
-        label: "Item1",
+        label: "Item 1: Javascript + Java",
         onClick: fn(),
       },
       {
-        label: "Item2",
+        label: "Item 2: Typescript",
         onClick: fn(),
       },
       {
-        label: "Item3",
+        label: "Item 3: React.js",
         onClick: fn(),
       },
       null,
       {
-        label: "Item4",
+        label: "Item 4: Next.js",
         onClick: fn(),
       },
       {
-        label: "Item5",
+        label: "Item 5: Nest.js",
         onClick: fn(),
       },
     ];
