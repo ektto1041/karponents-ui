@@ -1,1 +1,1 @@
-export { Color, Size, SizeWithoutX, SvgComponent, Width } from "./common";
+export type * from "./common";
