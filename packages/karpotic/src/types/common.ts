@@ -33,6 +33,7 @@ export type ColorSet = "default" | "dark";
 export type Border = "none" | "rounded" | "oval";
 export type Width = string | "full";
 export type SvgComponent = FC<SVGProps<SVGSVGElement> & { title?: string }>;
+export type IconPosition = "before" | "after";
 
 // Layout value types
 export type DimensionValue = string | [string?, string?, string?];

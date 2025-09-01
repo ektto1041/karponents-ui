@@ -11,6 +11,7 @@ const MainButton: FC<MainButtonProps> = ({
   border = "none",
   colorSet = "default",
   Icon,
+  iconPosition = "after",
   children,
   ...props
 }) => {
@@ -25,7 +26,8 @@ const MainButton: FC<MainButtonProps> = ({
         sizes,
         styles[sizes],
         borderClassName && styles[borderClassName],
-        colorSet === "dark" ? styles.dark : ""
+        colorSet === "dark" ? styles.dark : "",
+        styles[`${iconPosition}-icon`]
       )}
       style={{ ...props.style, width: width === "full" ? "100%" : width }}
     >

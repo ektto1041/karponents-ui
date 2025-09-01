@@ -2,6 +2,7 @@
   color: var(--color-light-unfocused-font);
   transition: 0.25s border-color, 0.25s color;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-color: var(--color-light-unfocused-font);
@@ -11,6 +12,10 @@
   color: var(--color-dark-unfocused-font);
   background-color: var(--color-dark-component-background);
   border-color: var(--color-dark-unfocused-font);
+}
+
+.before-icon {
+  flex-direction: row-reverse;
 }
 
 .sm {
