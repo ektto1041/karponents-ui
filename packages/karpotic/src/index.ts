@@ -9,3 +9,5 @@ export type { MainInputProps } from "./MainInput";
 
 export * from "./Block";
 export * from "./Paragraph";
+
+export type * from "./types";
