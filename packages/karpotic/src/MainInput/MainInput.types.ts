@@ -1,10 +1,10 @@
 import { ComponentPropsWithoutRef } from "react";
-import { Color, SizeWithoutX, SvgComponent, Width } from "../types";
+import { ColorSet, SizeWithoutX, SvgComponent, Width } from "../types";
 
 type MainInputOwnProps = {
   sizes?: SizeWithoutX;
   width?: Width;
-  color?: Color;
+  colorSet?: ColorSet;
   Icon?: SvgComponent;
 };
 

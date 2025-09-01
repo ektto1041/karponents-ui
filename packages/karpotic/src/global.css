@@ -95,6 +95,18 @@ ul {
   margin: 0;
 }
 
+h1 {
+  font-size: 36px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
 .l {
   font-weight: var(--font-weight-light);
 }

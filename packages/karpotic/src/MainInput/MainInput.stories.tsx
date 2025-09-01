@@ -25,7 +25,7 @@ const meta = {
       },
       options: ["sm", "md", "lg"],
     },
-    color: {
+    colorSet: {
       control: "inline-radio",
       options: ["default", "dark"],
     },
@@ -37,7 +37,7 @@ const meta = {
   args: {
     width: "300px",
     sizes: "md",
-    color: "default",
+    colorSet: "default",
     showIcon: false,
   },
 } satisfies Meta<MainInputProps & { showIcon: boolean }>;

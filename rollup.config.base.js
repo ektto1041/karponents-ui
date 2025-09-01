@@ -59,5 +59,5 @@ module.exports = {
       rootMode: "upward",
     }),
   ],
-  external: ["react", "react-dom", "@babel/runtime"],
+  external: ["react", "react-dom", "react/jsx-runtime", "@babel/runtime"],
 };

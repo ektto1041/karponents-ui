@@ -7,7 +7,7 @@ import styles from "./style.module.css";
 const MainInput: FC<MainInputProps> = ({
   width = "auto",
   sizes = "md",
-  color = "default",
+  colorSet = "default",
   Icon,
   ...props
 }) => {
@@ -16,7 +16,7 @@ const MainInput: FC<MainInputProps> = ({
       className={c(
         styles.container,
         width === "full" ? styles.full : "",
-        color === "dark" ? styles.dark : "",
+        colorSet === "dark" ? styles.dark : "",
         styles[sizes]
       )}
       style={width !== "full" ? { width } : undefined}
