@@ -1,6 +1,6 @@
 {
   "name": "@karponents-ui/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared assets for Karponents UI design system",
   "license": "MIT",
   "publishConfig": {
