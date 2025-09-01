@@ -1,9 +1,9 @@
 import { MainButtonProps } from "../MainButton";
-import { Color, SizeWithoutX, Width } from "../types";
+import { ColorSet, SizeWithoutX, Width } from "../types";
 
 type DropdownOwnProps = {
   sizes?: SizeWithoutX;
-  color?: Color;
+  colorSet?: ColorSet;
   anchor?: Anchor;
   label: string;
   width?: Width;
@@ -14,13 +14,13 @@ type DropdownOwnProps = {
 };
 
 export type DropdownMenuProps = {
-  color: Color;
+  colorSet: ColorSet;
   anchor: Anchor;
   itemList: DropdownItemData[];
 };
 
 export type DropdownMenuItemProps = {
-  color: Color;
+  colorSet: ColorSet;
   item: DropdownItemData;
 };
 

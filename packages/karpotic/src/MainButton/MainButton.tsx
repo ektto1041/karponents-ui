@@ -8,7 +8,7 @@ const MainButton: FC<MainButtonProps> = ({
   sizes = "md",
   width = "auto",
   border = true,
-  color = "default",
+  colorSet = "default",
   Icon,
   children,
   ...props
@@ -22,7 +22,7 @@ const MainButton: FC<MainButtonProps> = ({
         sizes,
         styles[sizes],
         border ? styles.border : "",
-        color === "dark" ? styles.dark : ""
+        colorSet === "dark" ? styles.dark : ""
       )}
       style={{ ...props.style, width: width === "full" ? "100%" : width }}
     >

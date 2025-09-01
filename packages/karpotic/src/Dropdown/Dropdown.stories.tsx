@@ -18,7 +18,7 @@ const meta = {
       },
       options: ["sm", "md", "lg"],
     },
-    color: {
+    colorSet: {
       control: "inline-radio",
       options: ["default", "dark"],
     },
@@ -38,7 +38,7 @@ const meta = {
   },
   args: {
     sizes: "md",
-    color: "default",
+    colorSet: "default",
     width: "auto",
     anchor: "L",
     label: "Dropdown",

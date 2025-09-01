@@ -12,7 +12,7 @@ import styles from "./style.module.css";
 
 const Dropdown: FC<DropdownProps> = ({
   sizes = "md",
-  color = "default",
+  colorSet = "default",
   label,
   anchor = "L",
   width = "auto",
@@ -35,7 +35,7 @@ const Dropdown: FC<DropdownProps> = ({
       <MainButton
         sizes={sizes}
         width={width}
-        color={color}
+        colorSet={colorSet}
         {...buttonProps}
         Icon={buttonProps?.Icon || (isOpen ? ArrowUpIcon : ArrowDownIcon)}
         onClick={handleOpen}
@@ -43,32 +43,36 @@ const Dropdown: FC<DropdownProps> = ({
         {label}
       </MainButton>
       {isOpen && (
-        <DropdownMenu itemList={itemList} color={color} anchor={anchor} />
+        <DropdownMenu itemList={itemList} colorSet={colorSet} anchor={anchor} />
       )}
     </div>
   );
 };
 
-const DropdownMenu: FC<DropdownMenuProps> = ({ itemList, color, anchor }) => {
+const DropdownMenu: FC<DropdownMenuProps> = ({
+  itemList,
+  colorSet,
+  anchor,
+}) => {
   return (
     <ul
       className={c(
         styles["dropdown-menu"],
-        styles[color],
+        styles[colorSet],
         anchor === "L" ? styles["anchor-l"] : styles["anchor-r"]
       )}
     >
       {itemList.map((item, i) => (
-        <DropdownMenuItem item={item} color={color} key={i} />
+        <DropdownMenuItem item={item} colorSet={colorSet} key={i} />
       ))}
     </ul>
   );
 };
 
-const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item, color }) => {
+const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item, colorSet }) => {
   return item ? (
     <li
-      className={c(styles["dropdown-item"], styles[color])}
+      className={c(styles["dropdown-item"], styles[colorSet])}
       onClick={() => {
         item.onClick();
       }}
@@ -77,7 +81,7 @@ const DropdownMenuItem: FC<DropdownMenuItemProps> = ({ item, color }) => {
     </li>
   ) : (
     <li className={styles["dropdown-divider"]}>
-      <div className={[styles["divider-line"], styles[color]].join(" ")} />
+      <div className={[styles["divider-line"], styles[colorSet]].join(" ")} />
     </li>
   );
 };

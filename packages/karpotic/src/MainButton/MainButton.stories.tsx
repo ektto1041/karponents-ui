@@ -28,7 +28,7 @@ const meta = {
       control: "inline-radio",
       options: [true, false],
     },
-    color: {
+    colorSet: {
       control: "inline-radio",
       options: ["default", "dark"],
     },
@@ -42,7 +42,7 @@ const meta = {
     width: "auto",
     border: true,
     onClick: fn(),
-    color: "default",
+    colorSet: "default",
     showIcon: false,
   },
 } satisfies Meta<MainButtonProps & { showIcon: boolean }>;
