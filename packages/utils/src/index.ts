@@ -1,3 +1,3 @@
-export function c(...args: string[]) {
+export function c(...args: (string | undefined)[]) {
   return args.filter(Boolean).join(" ");
 }
