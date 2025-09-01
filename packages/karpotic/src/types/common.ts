@@ -4,6 +4,10 @@ export type SizeWithoutX = "sm" | "md" | "lg";
 
 export type Size = SizeWithoutX | "xs" | "xl";
 
+export type Weight = "l" | "r" | "b";
+
+export type Typography = `${Weight} ${Size}`;
+
 export type Color =
   | "white-1"
   | "white-2"
