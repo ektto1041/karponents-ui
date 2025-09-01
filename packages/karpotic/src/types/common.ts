@@ -10,6 +10,7 @@ export type Typography = `${Weight} ${Size}`;
 
 // Color types
 export type Color =
+  | "inherit"
   | "white-1"
   | "white-2"
   | "white-3"
