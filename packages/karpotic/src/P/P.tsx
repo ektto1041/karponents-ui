@@ -2,7 +2,7 @@ import { FC } from "react";
 import { createStyleFromDimensions } from "../utils";
 import { PProps } from "./P.types";
 
-const P: FC<PProps> = ({ typography = "rmd", w, h, p, m, ...props }) => {
+const P: FC<PProps> = ({ typography = "r md", w, h, p, m, ...props }) => {
   const { style, children, ...restProps } = props;
   const dimensionStyles = createStyleFromDimensions(w, h, p, m);
 
