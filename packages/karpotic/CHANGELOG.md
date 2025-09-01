@@ -1,5 +1,17 @@
 # @karponents-ui/karpotic
 
+## 0.0.12
+
+### Patch Changes
+
+- fix: RSC fix
+
+## 0.0.11
+
+### Patch Changes
+
+- fix: 서버컴포넌트로 활용할 수 없는 에러 수정
+
 ## 0.0.10
 
 ### Patch Changes
