@@ -8,6 +8,7 @@ const Block: BlockCompoundComponents & FC<BlockProps> = ({
   h,
   p,
   m,
+  bgc,
   ...props
 }) => {
   const { style, children, ...restProps } = props;
@@ -19,6 +20,7 @@ const Block: BlockCompoundComponents & FC<BlockProps> = ({
       style={{
         ...style,
         ...dimensionStyles,
+        backgroundColor: `var(--color-${bgc})`,
       }}
     >
       {children}

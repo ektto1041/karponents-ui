@@ -9,6 +9,7 @@ const meta = {
   component: Block,
   tags: ["autodocs"],
   argTypes: {
+    bgc: { control: "text" },
     w: { control: "object" },
     h: { control: "object" },
     p: { control: "object" },

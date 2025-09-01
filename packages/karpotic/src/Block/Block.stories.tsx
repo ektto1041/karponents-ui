@@ -9,14 +9,15 @@ const meta = {
   component: Block,
   tags: ["autodocs"],
   argTypes: {
+    bgc: { control: "text" },
     w: { control: "object" },
     h: { control: "object" },
     p: { control: "object" },
     m: { control: "object" },
   },
   args: {
-    w: [undefined, "100px", undefined],
-    h: [undefined, "100px", undefined],
+    w: [undefined, "auto", undefined],
+    h: [undefined, "auto", undefined],
     p: ["0px", "0px", "0px", "0px"],
     m: ["0px", "0px", "0px", "0px"],
   },
