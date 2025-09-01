@@ -1,4 +1,4 @@
-import { DimensionValue, SpacingValue } from "../types";
+import { Border, DimensionValue, SpacingValue } from "../types";
 
 export const parseDimension = (dimension?: string | DimensionValue) => {
   if (!dimension) return {};
@@ -124,4 +124,10 @@ export const createStyleFromDimensions = (
     ...padding,
     ...margin,
   };
+};
+
+export const createBorderClassName = (border: Border) => {
+  if (border === "none") return;
+
+  return border;
 };

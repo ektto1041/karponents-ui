@@ -1,13 +1,14 @@
 import type { FC, SVGProps } from "react";
 
+// Size types
 export type SizeWithoutX = "sm" | "md" | "lg";
-
 export type Size = SizeWithoutX | "xs" | "xl";
 
+// Typography types
 export type Weight = "l" | "r" | "b";
-
 export type Typography = `${Weight} ${Size}`;
 
+// Color types
 export type Color =
   | "white-1"
   | "white-2"
@@ -28,12 +29,13 @@ export type Color =
   | "primary-dark";
 export type ColorSet = "default" | "dark";
 
+// Border, width, and SVG types
+export type Border = "none" | "rounded" | "oval";
 export type Width = string | "full";
-
 export type SvgComponent = FC<SVGProps<SVGSVGElement> & { title?: string }>;
 
+// Layout value types
 export type DimensionValue = string | [string?, string?, string?];
-
 export type SpacingValue =
   | string
   | [string, string]

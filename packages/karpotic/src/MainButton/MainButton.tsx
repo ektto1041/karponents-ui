@@ -1,18 +1,21 @@
 import { c } from "@karponents-ui/utils";
 import { FC } from "react";
 import "../global.css";
+import { createBorderClassName } from "../utils";
 import { MainButtonProps } from "./MainButton.types";
 import styles from "./style.module.css";
 
 const MainButton: FC<MainButtonProps> = ({
   sizes = "md",
   width = "auto",
-  border = true,
+  border = "none",
   colorSet = "default",
   Icon,
   children,
   ...props
 }) => {
+  const borderClassName = createBorderClassName(border);
+
   return (
     <button
       {...props}
@@ -21,7 +24,7 @@ const MainButton: FC<MainButtonProps> = ({
         "r",
         sizes,
         styles[sizes],
-        border ? styles.border : "",
+        borderClassName && styles[borderClassName],
         colorSet === "dark" ? styles.dark : ""
       )}
       style={{ ...props.style, width: width === "full" ? "100%" : width }}

@@ -4,12 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
+  border-color: var(--color-light-unfocused-font);
 }
 
 .container.dark {
   color: var(--color-dark-unfocused-font);
   background-color: var(--color-dark-component-background);
+  border-color: var(--color-dark-unfocused-font);
 }
 
 .sm {
@@ -42,12 +43,18 @@
   height: var(--line-height-lg);
 }
 
-.border {
-  border: 1px solid var(--color-light-unfocused-font);
+.rounded,
+.oval {
+  border-width: 1px;
+  border-style: solid;
 }
 
-.border.dark {
-  border: 1px solid var(--color-dark-unfocused-font);
+.rounded {
+  border-radius: 8px;
+}
+
+.oval {
+  border-radius: 9999px;
 }
 
 .container:hover {

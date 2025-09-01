@@ -26,7 +26,7 @@ const meta = {
     },
     border: {
       control: "inline-radio",
-      options: [true, false],
+      options: ["none", "rounded", "oval"],
     },
     colorSet: {
       control: "inline-radio",
@@ -40,7 +40,7 @@ const meta = {
   args: {
     sizes: "md",
     width: "auto",
-    border: true,
+    border: "rounded",
     onClick: fn(),
     colorSet: "default",
     showIcon: false,
