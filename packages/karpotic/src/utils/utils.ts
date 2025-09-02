@@ -152,7 +152,13 @@ export const createStylesFromFlex = (
   jc: JustifyContent | undefined,
   ai: AlignItems | undefined,
   ac: AlignContent | undefined
-) => {
+): {
+  flexDirection: Direction;
+  gap: string | undefined;
+  justifyContent: JustifyContent | undefined;
+  alignItems: AlignItems | undefined;
+  alignContent: AlignContent | undefined;
+} => {
   return {
     flexDirection: direction,
     gap,
