@@ -1,0 +1,7 @@
+.line {
+  display: flex;
+}
+
+.multiline {
+  flex-wrap: wrap;
+}
