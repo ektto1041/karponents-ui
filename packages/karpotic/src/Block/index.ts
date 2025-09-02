@@ -1,2 +1,2 @@
 export { default as Block } from "./Block";
-export type * from "./Block.types";
+export type { BlockCompoundComponents, BlockProps } from "./Block.types";
