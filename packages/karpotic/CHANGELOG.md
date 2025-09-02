@@ -1,5 +1,11 @@
 # @karponents-ui/karpotic
 
+## 0.0.13
+
+### Patch Changes
+
+- Line 컴포넌트 추가
+
 ## 0.0.12
 
 ### Patch Changes
