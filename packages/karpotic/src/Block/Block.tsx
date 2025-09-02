@@ -1,5 +1,8 @@
 import { FC } from "react";
-import { createStyleFromDimensions } from "../utils";
+import {
+  createStyleFromBackgroundColor,
+  createStyleFromDimensions,
+} from "../utils";
 import { BlockCompoundComponents, BlockProps } from "./Block.types";
 import styles from "./style.module.css";
 
@@ -13,6 +16,7 @@ const Block: BlockCompoundComponents & FC<BlockProps> = ({
 }) => {
   const { style, children, ...restProps } = props;
   const dimensionStyles = createStyleFromDimensions(w, h, p, m);
+  const bgcStyle = createStyleFromBackgroundColor(bgc);
 
   return (
     <div
@@ -20,7 +24,7 @@ const Block: BlockCompoundComponents & FC<BlockProps> = ({
       style={{
         ...style,
         ...dimensionStyles,
-        backgroundColor: `var(--color-${bgc})`,
+        ...bgcStyle,
       }}
     >
       {children}

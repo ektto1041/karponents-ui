@@ -131,6 +131,12 @@ export const createStyleFromColor = (color: Color) => {
   else return { color: `var(--color-${color})` };
 };
 
+export const createStyleFromBackgroundColor = (bgc: Color | undefined) => {
+  if (bgc === undefined) return undefined;
+  if (bgc === "inherit") return { backgroundColor: bgc };
+  else return { backgroundColor: `var(--color-${bgc})` };
+};
+
 export const createBorderClassName = (border: Border) => {
   if (border === "none") return;
 
