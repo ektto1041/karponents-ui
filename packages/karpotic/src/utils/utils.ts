@@ -1,4 +1,13 @@
-import { Border, Color, DimensionValue, SpacingValue } from "../types";
+import {
+  AlignContent,
+  AlignItems,
+  Border,
+  Color,
+  DimensionValue,
+  Direction,
+  JustifyContent,
+  SpacingValue,
+} from "../types";
 
 export const parseDimension = (dimension?: string | DimensionValue) => {
   if (!dimension) return {};
@@ -135,6 +144,22 @@ export const createStyleFromBackgroundColor = (bgc: Color | undefined) => {
   if (bgc === undefined) return undefined;
   if (bgc === "inherit") return { backgroundColor: bgc };
   else return { backgroundColor: `var(--color-${bgc})` };
+};
+
+export const createStylesFromFlex = (
+  direction: Direction,
+  gap: string | undefined,
+  jc: JustifyContent | undefined,
+  ai: AlignItems | undefined,
+  ac: AlignContent | undefined
+) => {
+  return {
+    flexDirection: direction,
+    gap,
+    justifyContent: jc,
+    alignItems: ai,
+    alignContent: ac,
+  };
 };
 
 export const createBorderClassName = (border: Border) => {

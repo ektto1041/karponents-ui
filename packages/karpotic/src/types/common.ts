@@ -1,4 +1,4 @@
-import type { FC, SVGProps } from "react";
+import type { CSSProperties, FC, SVGProps } from "react";
 
 // Size types
 export type SizeWithoutX = "sm" | "md" | "lg";
@@ -35,6 +35,10 @@ export type Border = "none" | "rounded" | "oval";
 export type Width = string | "full";
 export type SvgComponent = FC<SVGProps<SVGSVGElement> & { title?: string }>;
 export type IconPosition = "before" | "after";
+export type Direction = "row" | "column" | "row-reverse" | "column-reverse";
+export type JustifyContent = CSSProperties["justifyContent"];
+export type AlignItems = CSSProperties["alignItems"];
+export type AlignContent = CSSProperties["alignContent"];
 
 // Layout value types
 export type DimensionValue = string | [string?, string?, string?];
