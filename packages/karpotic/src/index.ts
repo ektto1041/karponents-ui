@@ -7,6 +7,8 @@ export type { MainButtonProps } from "./MainButton";
 export { MainInput } from "./MainInput";
 export type { MainInputProps } from "./MainInput";
 
+export type { ContainerProps } from "./Container";
+
 export { Block } from "./Block";
 export type { BlockCompoundComponents, BlockProps } from "./Block";
 

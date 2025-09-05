@@ -10,23 +10,18 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     bgc: { control: "text" },
-    w: { control: "object" },
-    h: { control: "object" },
-    p: { control: "object" },
-    m: { control: "object" },
+    w: { control: "text" },
+    h: { control: "text" },
+    p: { control: "text" },
+    m: { control: "text" },
   },
-  args: {
-    w: [undefined, "auto", undefined],
-    h: [undefined, "auto", undefined],
-    p: ["0px", "0px", "0px", "0px"],
-    m: ["0px", "0px", "0px", "0px"],
-  },
+  args: {},
 } satisfies Meta<BlockProps>;
 
 export default meta;
 type Story = StoryObj<BlockProps>;
 
-export const Primary: Story = {
+export const Default: Story = {
   render: (args) => {
     return (
       <>
