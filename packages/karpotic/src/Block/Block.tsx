@@ -1,38 +1,16 @@
 import { FC } from "react";
-import {
-  createStyleFromBackgroundColor,
-  createStyleFromDimensions,
-} from "../utils";
+import { Container } from "../Container";
 import { BlockCompoundComponents, BlockProps } from "./Block.types";
 import styles from "./style.module.css";
 
 const Block: BlockCompoundComponents & FC<BlockProps> = ({
-  w,
-  h,
-  p,
-  m,
-  bgc,
-  ...props
+  children,
+  ...restProps
 }) => {
-  const { style, children, ...restProps } = props;
-  const dimensionStyles = createStyleFromDimensions(w, h, p, m);
-  const bgcStyle = createStyleFromBackgroundColor(bgc);
-
-  return (
-    <div
-      {...restProps}
-      style={{
-        ...style,
-        ...dimensionStyles,
-        ...bgcStyle,
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <Container {...restProps}>{children}</Container>;
 };
 
-const Center: FC<BlockProps> = ({ className = "", ...props }) => (
+const Center: FC<BlockProps> = ({ className, ...props }) => (
   <Block {...props} className={`${styles.center} ${className}`}>
     {props.children}
   </Block>

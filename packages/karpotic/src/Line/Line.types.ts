@@ -1,20 +1,7 @@
-import { ComponentProps } from "react";
-import {
-  AlignContent,
-  AlignItems,
-  Color,
-  DimensionValue,
-  Direction,
-  JustifyContent,
-  SpacingValue,
-} from "../types";
+import { ContainerProps } from "../Container";
+import { AlignContent, AlignItems, Direction, JustifyContent } from "../types";
 
 interface LineOwnProps {
-  w?: DimensionValue;
-  h?: DimensionValue;
-  p?: SpacingValue;
-  m?: SpacingValue;
-  bgc?: Color;
   direction?: Direction;
   gap?: string;
   multiline?: boolean;
@@ -23,4 +10,4 @@ interface LineOwnProps {
   ac?: AlignContent;
 }
 
-export type LineProps = ComponentProps<"div"> & LineOwnProps;
+export type LineProps = ContainerProps & LineOwnProps;

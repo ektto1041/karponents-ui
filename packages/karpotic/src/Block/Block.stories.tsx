@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import Line from "../Line/Line";
 import { MainButton } from "../MainButton";
 import Block from "./Block";
 import { BlockProps } from "./Block.types";
@@ -10,23 +11,19 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     bgc: { control: "text" },
-    w: { control: "object" },
-    h: { control: "object" },
-    p: { control: "object" },
-    m: { control: "object" },
+    w: { control: "text" },
+    h: { control: "text" },
+    p: { control: "text" },
+    m: { control: "text" },
+    flex: { control: "text" },
   },
-  args: {
-    w: [undefined, "auto", undefined],
-    h: [undefined, "auto", undefined],
-    p: ["0px", "0px", "0px", "0px"],
-    m: ["0px", "0px", "0px", "0px"],
-  },
+  args: {},
 } satisfies Meta<BlockProps>;
 
 export default meta;
 type Story = StoryObj<BlockProps>;
 
-export const Primary: Story = {
+export const Default: Story = {
   render: (args) => {
     return (
       <>
@@ -35,6 +32,20 @@ export const Primary: Story = {
           <MainButton>Button2</MainButton>
           <MainButton>Button3</MainButton>
         </Block>
+      </>
+    );
+  },
+};
+
+export const BlocksInLine: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Line>
+          <Block {...args} w="200px" h="200px" bgc="white-2"></Block>
+          <Block {...args} w="200px" h="200px" bgc="white-3"></Block>
+          <Block {...args} w="200px" h="200px" bgc="white-4"></Block>
+        </Line>
       </>
     );
   },
