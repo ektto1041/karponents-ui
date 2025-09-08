@@ -5,7 +5,7 @@ import {
 } from "../utils";
 import { ContainerProps } from "./Container.types";
 
-const Container: FC<ContainerProps> = ({ w, h, p, m, bgc, ...props }) => {
+const Container: FC<ContainerProps> = ({ w, h, p, m, bgc, flex, ...props }) => {
   const { style, children, ...restProps } = props;
   const dimensionStyles = createStyleFromDimensions(w, h, p, m);
   const bgcStyle = createStyleFromBackgroundColor(bgc);
@@ -17,6 +17,7 @@ const Container: FC<ContainerProps> = ({ w, h, p, m, bgc, ...props }) => {
         ...style,
         ...dimensionStyles,
         ...bgcStyle,
+        flex,
       }}
     >
       {children}

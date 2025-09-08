@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import Line from "../Line/Line";
 import { MainButton } from "../MainButton";
 import Block from "./Block";
 import { BlockProps } from "./Block.types";
@@ -14,6 +15,7 @@ const meta = {
     h: { control: "text" },
     p: { control: "text" },
     m: { control: "text" },
+    flex: { control: "text" },
   },
   args: {},
 } satisfies Meta<BlockProps>;
@@ -30,6 +32,20 @@ export const Default: Story = {
           <MainButton>Button2</MainButton>
           <MainButton>Button3</MainButton>
         </Block>
+      </>
+    );
+  },
+};
+
+export const BlocksInLine: Story = {
+  render: (args) => {
+    return (
+      <>
+        <Line>
+          <Block {...args} w="200px" h="200px" bgc="white-2"></Block>
+          <Block {...args} w="200px" h="200px" bgc="white-3"></Block>
+          <Block {...args} w="200px" h="200px" bgc="white-4"></Block>
+        </Line>
       </>
     );
   },

@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { Color, DimensionValue, SpacingValue } from "../types";
+import { Color, DimensionValue, Flex, SpacingValue } from "../types";
 
 interface ContainerOwnProps {
   w?: DimensionValue;
@@ -7,6 +7,7 @@ interface ContainerOwnProps {
   p?: SpacingValue;
   m?: SpacingValue;
   bgc?: Color;
+  flex?: Flex;
 }
 
 export type ContainerProps = ComponentProps<"div"> & ContainerOwnProps;

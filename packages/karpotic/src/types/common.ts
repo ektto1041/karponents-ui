@@ -39,6 +39,7 @@ export type Direction = "row" | "column" | "row-reverse" | "column-reverse";
 export type JustifyContent = CSSProperties["justifyContent"];
 export type AlignItems = CSSProperties["alignItems"];
 export type AlignContent = CSSProperties["alignContent"];
+export type Flex = CSSProperties["flex"];
 
 // Layout value types
 export type DimensionValue = string | [string?, string?, string?];
